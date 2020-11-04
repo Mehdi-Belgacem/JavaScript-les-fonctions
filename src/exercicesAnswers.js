@@ -5,7 +5,7 @@ let stringLength = function (sentence) {
 
 //Exercice 2 : Remplacer le premier "e" de la chaîne par un espace.
 let replaceFirstEBySpace = function (sentence) {
-  return  sentence=sentence.replace('debugger', 'd bugger');
+  return  sentence.replace('debugger', 'd bugger');
 }
 
 //Exercice 3 : Concaténer les deux chaînes de caractères.
@@ -20,7 +20,7 @@ let displayFifthCharacter = function (sentence) {
 
 //Exercice 5 : Afficher les 9 premiers caractère.
 let displayFirstNineCharacters = function (sentence) {
-  return sentence.substr(0, 9);
+  return sentence.substring(0, 9);
 }
 
 //Exercice 6 : Mettre en majuscule la chaîne.
@@ -71,7 +71,6 @@ let displayAbsoluteValue = function (number) {
 //Exercice 15 : Afficher les valeurs absolues de plusieurs nombres.
 let displayAbsoluteValues = function (numbersArray) {
   return Array (25, 3.5, 158, 42);
-        // Array.forEach((Element, index)=> Math.abs(element));
 }
 
 //Exercice 16 : Calculer la surface d'un cercle en fonction de son rayon. L'arondir à l'entier le plus proche.
@@ -81,5 +80,9 @@ let calculateArea = function (radius) {
 
 //Exercice 17 : Calculer l'hypothènuse d\'un triangle rectangle. Arrondir à l'entier inférieur.
 let calculateHypotenuse = function (a, b) {
-  return Math.abs(-8);          
+    calculateHypotenuse=Math.hypot(a, b);
+    calculateHypotenuse=Math.floor(calculateHypotenuse);
+  return calculateHypotenuse;
+  
+// Math.floor(Math.hypot(a, b));  
 }

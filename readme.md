@@ -11,20 +11,20 @@ Cette partie a pour but de vous faire utiliser les fonctions natives de javascri
 - Retournez la réponse
 
 **Exemple :**
-```
+'''
 let exemple = function(){
   let reponse = votreCode();
   return reponse;
 }
-```
+'''
 
 ou
 
-```
+'''
 let exemple = function(){
   return votreCode();
 }
-```
+'''
 
 - Lancez **SpecRunner.html** dans votre navigateur pour voir si vous avez bon.
 - Ne pas toucher au dossier **spec**
