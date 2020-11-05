@@ -5,7 +5,7 @@ let stringLength = function (sentence) {
 
 //Exercice 2 : Remplacer le premier "e" de la chaîne par un espace.
 let replaceFirstEBySpace = function (sentence) {
-  return  sentence.replace('debugger', 'd bugger');
+  return  sentence.replace('e', ' ');
 }
 
 //Exercice 3 : Concaténer les deux chaînes de caractères.
@@ -16,6 +16,7 @@ let concatenateSentences = function (firstSentence, secondSentence) {
 //Exercice 4 : Afficher le cinquième caractère de la chaîne.
 let displayFifthCharacter = function (sentence) {
   return sentence.charAt(4);
+  // Returne sentence[4] --(autre solution)--
 }
 
 //Exercice 5 : Afficher les 9 premiers caractère.
@@ -40,22 +41,30 @@ let removeSpaces = function (sentence) {
 
 //Exercice 9 : Afficher true si le paramètre d'entrée de la fonction est de type *string*.
 let isString = function (sentence) {
-  return sentence.sentence=Boolean("true");
+  if (typeof(sentence) == 'string'){
+    return true;
+  }else {
+    return false;
+  }
 }
+// return sentence=Boolean('true') --(autre solution)-- \\
+
 
 //Exercice 10 : Afficher l'extension du fichier.
 let displayExtension = function (fileName) {
-  return extension = fileName.substring(fileName.lastIndexOf('.') + 1); 
+  return fileName.split('.').pop();
+  //fileName.substring(fileName.lastIndexOf('.') + 1);
 }
 
 //Exercice 11 : Compter le nombre d'espace dans la chaîne.
 let countSpaces = function (sentence) {
-  return nbesp = sentence.split(' ').length -1 ;
+  return sentence.match(/ /g).length;
+  // return sentence.split(' ').length -1;  --(autre solution)-- \\
 }
 
 //Exercice 12 : Inverser une chaîne de caractères.
 let invertSentence = function (sentence) {
-  return sentence = sentence.split('').reverse().join('');
+  return sentence.split('').reverse().join('');
 }
 
 //Exercice 13 : Chercher si dans la chaîne de caractère se trouve "La Manu".
@@ -70,12 +79,13 @@ let displayAbsoluteValue = function (number) {
 
 //Exercice 15 : Afficher les valeurs absolues de plusieurs nombres.
 let displayAbsoluteValues = function (numbersArray) {
-  return Array (25, 3.5, 158, 42);
+  return numbersArray.map(Math.abs);
+  // numbersArray.map(x => Math.abs(x)); --(autre solution)-- \\
 }
 
 //Exercice 16 : Calculer la surface d'un cercle en fonction de son rayon. L'arondir à l'entier le plus proche.
 let calculateArea = function (radius) {
-  return 2 * Math.PI * radius;
+  return Math.round(Math.PI * Math.pow(radius, 2));
 }
 
 //Exercice 17 : Calculer l'hypothènuse d\'un triangle rectangle. Arrondir à l'entier inférieur.
